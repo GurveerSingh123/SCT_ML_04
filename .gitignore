@@ -29,8 +29,7 @@ Thumbs.db
 # Logs
 *.log
 
-# Dataset (optional - uncomment if dataset is local)
-# leapGestRecog/
+
 
 # TensorFlow / Keras
 *.hdf5
