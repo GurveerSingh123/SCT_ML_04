@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Model files (large artifacts)
+*.h5
+*.pkl
+*.joblib
+
+# Logs
+*.log
+
+# Dataset (optional - uncomment if dataset is local)
+# leapGestRecog/
+
+# TensorFlow / Keras
+*.hdf5
+
+# Cache
+*.cache
+
+# matplotlib
+*.png
+*.jpg
+*.jpeg
