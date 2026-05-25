@@ -54,9 +54,11 @@ Subject-wise split:
 - Height shift: 0.2
 - Horizontal flip
 
+---
+
 ## 4. CNN Architecture
 
-Input: 64×64×3
+Input: 64×64×3  
 
 Conv2D(32) → MaxPool  
 Conv2D(64) → MaxPool  
@@ -65,24 +67,80 @@ Flatten
 Dense(128) → Dropout(0.5)  
 Dense(10) → Softmax  
 
-## 5. Training
-- Optimizer: Adam
-- Loss: Categorical Crossentropy
-- Epochs: 10
-- Batch size: 32
+---
+
+## 📊 Training Epoch Results
+
+Epoch 1/10  
+accuracy: 0.4364 - loss: 1.5371 - val_accuracy: 0.6917 - val_loss: 0.8460  
+
+Epoch 2/10  
+accuracy: 0.7727 - loss: 0.6428 - val_accuracy: 0.8257 - val_loss: 0.4961  
+
+Epoch 3/10  
+accuracy: 0.8643 - loss: 0.3835 - val_accuracy: 0.7193 - val_loss: 0.8146  
+
+Epoch 4/10  
+accuracy: 0.9101 - loss: 0.2690 - val_accuracy: 0.7810 - val_loss: 0.6635  
+
+Epoch 5/10  
+accuracy: 0.9287 - loss: 0.2177 - val_accuracy: 0.8457 - val_loss: 0.4952  
+
+Epoch 6/10  
+accuracy: 0.9456 - loss: 0.1671 - val_accuracy: 0.9180 - val_loss: 0.2533  
+
+Epoch 7/10  
+accuracy: 0.9482 - loss: 0.1520 - val_accuracy: 0.8235 - val_loss: 0.5404  
+
+Epoch 8/10  
+accuracy: 0.9605 - loss: 0.1221 - val_accuracy: 0.6992 - val_loss: 0.8933  
+
+Epoch 9/10  
+accuracy: 0.9619 - loss: 0.1087 - val_accuracy: 0.9233 - val_loss: 0.3676  
+
+Epoch 10/10  
+accuracy: 0.9679 - loss: 0.0996 - val_accuracy: 0.8512 - val_loss: 0.6139  
 
 ---
 
 # 📊 Evaluation Results
 
-## Test Performance
-- Accuracy: 94.55%
-- Loss: 0.2355
+## 🔥 Training Performance
+- Final Training Accuracy: 96.79%
+- Final Training Loss: 0.0996
 
-## Observations
-- Strong performance overall
-- Some confusion in class 7 and 9
-- Good generalization with subject-wise split
+---
+
+## 🧪 Validation Performance (Best Epoch)
+- Best Validation Accuracy: 92.33% (Epoch 9)
+- Best Validation Loss: 0.2533
+
+---
+
+## 🧾 Test Performance
+- Test Accuracy: 85.12%
+- Test Loss: 0.6139
+
+---
+
+## 📌 Classification Report (Test Set)
+
+              precision    recall  f1-score   support
+
+           0       0.89      1.00      0.94       400
+           1       1.00      0.98      0.99       400
+           2       0.74      0.73      0.73       400
+           3       0.93      0.65      0.77       400
+           4       0.87      0.71      0.79       400
+           5       0.77      0.96      0.86       400
+           6       0.90      1.00      0.95       400
+           7       0.70      0.81      0.75       400
+           8       0.89      1.00      0.94       400
+           9       0.91      0.67      0.77       400
+
+    accuracy                           0.85      4000
+   macro avg       0.86      0.85      0.85      4000
+weighted avg       0.86      0.85      0.85      4000
 
 ---
 
@@ -119,5 +177,3 @@ python webcam.py
 
 ---
 
-# 👨‍💻 Author
-Hand Gesture Recognition Project using CNN

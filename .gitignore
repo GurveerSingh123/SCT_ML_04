@@ -30,6 +30,9 @@ Thumbs.db
 *.log
 
 
+#Dataset
+/leapGestRecog
+
 
 # TensorFlow / Keras
 *.hdf5
@@ -37,7 +40,3 @@ Thumbs.db
 # Cache
 *.cache
 
-# matplotlib
-*.png
-*.jpg
-*.jpeg

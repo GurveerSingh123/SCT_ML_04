@@ -129,7 +129,7 @@ print(classification_report(y_true, y_pred_classes))
 
 cm = confusion_matrix(y_true, y_pred_classes)
 plt.figure(figsize=(10,7))
-sns.heatmap(cm,annot=True,fmt='d')
+sns.heatmap(cm,annot=True,fmt='d',cmap='Blues')
 plt.xlabel("Predicted")
 plt.ylabel("Actual")
 plt.show()
